@@ -1,0 +1,727 @@
+/* Define Color Variables */
+:root {
+    --color-primary: #fe5a50;
+    --color-secondary: #2b3457;
+    --color-background: #f7f7f7;
+    --color-text: #333;
+    --color-text-muted: #6b7280;
+    --color-border: #ddd;
+    --color-border-light: #e5e7eb;
+    --color-checkmark: #f3f4f6;
+    --color-checkmark-border: #d1d5db;
+    --color-overlay: rgba(0, 0, 0, 0.5);
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-placeholder: #9ca3af;
+}
+
+/* Font-face */
+@font-face {
+    font-family: 'Urbane Rounded';
+    src: url('./fonts/UrbaneRounded-Heavy.ttf') format('truetype'); /* Adjust the path as necessary */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styles */
+body {
+    font-family: 'sans-serif ', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: 'Urbane Rounded';
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 15px; */
+    background-color: white;
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+    /* padding: 0px 60px; */
+}
+
+.logo a {
+    font-size: 24px;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--color-primary);
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    background-color: var(--color-secondary);
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-links li {
+    /* margin: 0 15px; */
+    position: relative;
+    color: #2b3457;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border-radius: 12px;
+    margin-left: 3px;
+    border: 2px solid transparent;
+
+}
+
+.nav-links a {
+    color: var(--color-secondary);
+    /* font-weight: 600; */
+    font-size: 16px;
+}
+
+
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    padding: 10px;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.nav-links .dropdown-content li {
+    margin-bottom: 10px;
+}
+
+.nav-links .dropdown-content li:last-child {
+    margin-bottom: 0;
+    /* background-color: ; */
+}
+
+.nav-links .dropdown-content a {
+    color: var(--color-secondary);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.nav-links .dropdown.active .dropdown-content {
+    display: block;
+}
+
+.get-quote-btn {
+    background-color: white;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 8px 20px;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem; */
+    /* border-radius: 20px; */
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+  
+
+        }
+
+.get-quote-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+
+}
+
+.get-quote-btn-div:hover{
+    background-color :#fff !important;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    padding: 15px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.addItemsBtnContainer{
+    width: 100%;
+/* background-color: red; */
+display: flex;
+align-items: flex-end;
+justify-content: flex-end;
+}
+
+/* .sidebar.open {
+    transform: translateX(0);
+} */
+
+.sidebar .close-btn {
+    font-size: 24px;
+    border: none;
+    background: none;
+    color: var(--color-secondary);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links li {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.sidebar-links a {
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.sidebar .dropdown-content {
+    display: none;
+    background-color: white;
+    box-shadow: 0 4px 8px var(--color-shadow);
+    padding: 10px;
+    min-width: 150px;
+}
+
+.sidebar .dropdown-content li {
+    margin-bottom: 10px;
+}
+
+.sidebar .dropdown-content li:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar .dropdown-content a {
+    color: var(--color-secondary);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.sidebar .dropdown.active .dropdown-content {
+    display: block;
+}
+ 
+
+
+/* Background Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-overlay);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 900;
+}
+
+.overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Quote Section */
+.quote-section {
+    padding: 40px;
+    background-color: var(--color-background);
+    /* background-color: red; */
+    max-width: 600px;
+    padding-top: 60px;
+ 
+    margin: 0 auto;
+}
+
+.quote-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(  --color-secondary);
+    font-size: 3.29rem;
+    text-align: center;
+}
+
+.quote-section p {
+   
+    margin-bottom: 30px;
+    font-size: 1.375rem !important;
+    color: var(  --color-secondary);
+    text-align: center;
+}
+
+
+
+/* Form Styles */
+.form-container {
+    background-color: white;
+    padding: 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(43, 50, 75, 0.1);
+    transition: box-shadow .25s ease;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+.form-container label {
+    display: block;
+    font-size: 16px;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 550;
+}
+
+.text-primary{
+    color: var(--color-primary);
+}
+
+
+.pickupInput {
+    width: 83%;
+    padding: 8px 32px;
+    margin-bottom: 20px;
+    border: 2px solid var(--color-border-light);
+    border-radius: 12px;
+    font-size: 16px;
+    color: var(--color-text);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+}
+
+input:focus {
+    border: 2px solid var(--color-primary);
+    box-shadow: 2px .22px 5px #fdbbbf;;
+    outline: none; /* Remove default outline */
+}
+
+/* Optional: If you want to apply the same style to select elements */
+select:focus {
+    border: 2px solid var(--color-primary);
+    box-shadow: 2px .22px 5px #fdbbbf;;
+    outline: none; /* Remove default outline */
+}
+
+.form-container-select {
+    width: 95%;
+    padding: 8px 32px;
+    margin-bottom: 20px;
+    border: 2px solid var(--color-border-light);
+    border-radius: 12px;
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+
+
+.form-container select {
+    appearance: none;
+    background-color: #fff;
+}
+
+.form-container input[type="text"]::placeholder {
+    color: var(--color-placeholder);
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-secondary);
+    user-select: none;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 2.2em;
+    margin-bottom: 0.2rem;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container-textArea{
+    display: block;
+    width: 90%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: white;
+    background-clip: padding-box;
+    border: 2px solid #e7e8ea;
+    appearance: none;
+    border-radius: 12px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.checkbox-container-textArea:focus{
+    border: 2px solid var(--color-primary);
+    box-shadow: 2px .22px 5px #fdbbbf;;
+    outline: none; /* Remove default outline */
+}
+.checkbox-container-textArea::placeholder {
+    color:var(--color-border); /* Example color; adjust as needed */
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-checkmark);
+    border: 1px solid var(--color-checkmark-border);
+    border-radius: 4px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--color-primary);
+    border: none;
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.hidden {
+    display: none;
+}
+
+.checkbox-container-textArea.hidden {
+    display: none;
+}
+
+
+/* Style for nav-links on hover */
+.nav-links li:hover {
+    background-color: var( --color-border-light);
+}
+
+/* Style for active dropdown items */
+.nav-links .dropdown.active {
+    background-color: var( --color-border-light);
+}
+
+.nav-links .dropdown.active .dropdown-content {
+    display: block; /* Ensure the dropdown content is visible when the parent is active */
+}
+
+/* Ensure dropdown content items inherit the background of the parent */
+.nav-links .dropdown.active .dropdown-content li {
+    background-color: var( --color-border-light);
+    transition: 0.4s ease;
+}
+
+.dropdownList{
+    background-color: #fff !important;
+    /* text-decoration: none !important; */
+    /* text-decoration: double; */
+    list-style-type: none;
+
+}
+.dropdownList:hover{
+    background-color: var( --color-border-light) !important;
+
+}
+
+
+
+.item-dropdown {
+    position: relative;
+    display: block;
+    margin: 0px 0;
+    width: 100%;
+}
+.item-dropdown-content {
+    display: none;
+    position: relative; /* Change from absolute to relative */
+    background-color: #f9f9f9;
+    width: 100%;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    border-radius: 5px;
+    box-sizing: border-box;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Sliding effect */
+}
+
+.item-dropdown-content.show {
+    display: block;
+    min-height: 100px; /* Adjust based on content height */
+}
+
+.item-dropdown-button {
+    background-color: #fff;
+    color: var(--color-secondary);
+    padding: 1rem 0.5rem;
+    border: none;
+    cursor: pointer;
+    /* border-radius: 5px; */
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    /* box-sizing: border-box; */
+    position: relative; /* Ensure dropdowns appear correctly */
+    border-top: 2px solid var(--color-border);
+    /* border-bottom: 2px solid var(--color-border); */
+}
+
+.item-dropdown-button:hover {
+    background-color:var(--color-checkmark-border);
+}
+.icon-image {
+    margin-right: 8px;
+}
+
+.form-container3-label{
+    padding-bottom: 1rem;
+    /* background-color: red; */
+}
+
+.sidebar{
+    display: none;
+}
+
+
+
+.option-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Added for spacing */
+    flex-wrap: wrap;
+}
+
+.option-item {
+    padding: 10px 15px; 
+    border: 2px solid var(--color-checkmark-border); /* Default border color */
+    border-radius: 1.7rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.option-item.active {
+    border-color: var(--color-primary); /* Border color when active */
+    font-weight: bold; /* Optional: make text bold */
+    background-color: #f8f8f8; /* Optional: light background color for contrast */
+}
+
+.date-container{
+    width: 100%;
+    margin-top: 2rem;
+
+  
+}
+
+.calContainer{
+    display: flex;
+    width: 100%;
+}
+.date-range-container{
+    width: 100%;
+    margin-top: 2rem;
+    /* display: flex !important; */
+    flex-direction: row;
+    flex: 1 1 auto;
+    /* background-color: red; */
+
+}
+.cal1{
+    /* background-color: blue; */
+    width: 100%;
+}
+
+.calInput{
+    width: 50%;
+    padding: 8px 32px;
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    /* font-size: 16px; */
+    color: var(--color-secondary);
+    /* background-color: red; */
+}
+.date-input{
+    width: 85%;
+    padding: 8px 32px;
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    /* font-size: 16px; */
+    color: var(--color-secondary);
+}
+
+.date-input:focus{
+    border: 2px solid var(--color-primary);
+}
+
+
+.service-checkbox:checked{
+    /* background-color: red; */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar{
+        padding: 0.75rem 20px;
+    }
+
+    .sidebar {
+        display: block;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .overlay.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .quote-section {
+        padding: 20px;
+    }
+
+    .overlay {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 900;
+    }
+
+    .overlay.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    .quote-section h1 {
+        font-size: calc(1.485rem + 1.82vw);
+        margin-bottom: 20px;
+        color: var(  --color-secondary);
+       
+        text-align: center;
+    }
+    
+    .quote-section p {
+       
+        margin-bottom: 30px;
+        font-size: 1.125rem !important;
+        color: var(  --color-secondary);
+        text-align: center;
+    }
+
+
+    .form-container-select {
+        width: 100%;
+       
+    }
+    
+    .pickupInput {
+        width: 78%;
+
+    }
+
+    .checkbox-container-textArea{
+            width: 87%;
+    }
+
+
+    .option-item {
+        /* padding: 8px 5px; */
+    }
+    
+
+
+ 
+}
