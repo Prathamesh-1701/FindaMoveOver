@@ -40,6 +40,13 @@ h1, h2 {
     font-family: 'Urbane Rounded';
 }
 
+.highlighted-text {
+    color: #fe5a50; /* Updated color */
+}
+#totalCount {
+    color: #2b3457; /* Default color */
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -558,12 +565,17 @@ select:focus {
 
 .item-container3-grey{
     color: var(--color-border);
+    display: none;
 }
 
 .item-container3-text{
     text-align: right;
+    /* margin-right: 150px; */
     /* background-color: red; */
 }
+
+
+
 
 .item-container3-label{
     width: 100%;
@@ -574,7 +586,7 @@ select:focus {
     display: flex;
     align-items: center;
     justify-content: flex-end ;
-    gap: 50px;
+    /* gap: 50px; */
 }
 .container3-icon-add{
     border-radius: 12px;
@@ -584,6 +596,36 @@ select:focus {
     padding-bottom: 0.4rem !important;
     border: 2px solid var(--color-secondary);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.countBtnContainer{
+    display: flex;
+    width: 150px;
+    flex-direction: row;
+    /* background-color: #333; */
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    /* justify-content: center; */
+}
+
+.hidden {
+    display: none;
+}
+
+
+.container3-icon-add .fa-minus,
+.container3-icon-add .fa-plus {
+    cursor: pointer;
+}
+
+.quantity {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
 }
 
 .container3-icon-add:hover{
@@ -619,10 +661,26 @@ select:focus {
 .container3icon{
     width: 20px !important;
     height: 20px !important;
+    margin-right: 10px;
 }
 .dropdown-icon{
     color: var(--color-primary);
 }
+
+
+.dropHead
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    width: 100%;
+    margin-right: 5px;
+}
+
+
+
 
 .item-dropdown-button {
     background-color: #fff;
@@ -644,7 +702,9 @@ select:focus {
 }
 
 .item-dropdown-button:hover {
-    background-color:var(--color-checkmark-border);
+    background-color:#faf7f7;
+    /* background-color:var(--color-border-light); */
+    
 }
 .icon-image {
     margin-right: 8px;
@@ -894,6 +954,21 @@ select:focus {
 .radio-container6{
     width: 80%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
