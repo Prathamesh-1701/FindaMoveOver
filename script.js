@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    
+
+
     // Handle dropdown toggles in the main navbar
     const dropdownToggles = document.querySelectorAll('.navbar .dropdown-toggle');
     dropdownToggles.forEach(toggle => {
