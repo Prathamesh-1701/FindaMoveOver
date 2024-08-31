@@ -14,12 +14,369 @@
     --color-placeholder: #9ca3af;
 }
 
+.textAreaOther {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--color-border-light);
+    text-indent: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.upload-area {
+    width: 100%;
+    max-width: 500px;
+    /* Adjust as needed */
+    height: 200px;
+    border: 2px dashed #ccc;
+    /* Dashed border */
+    border-radius: 12px;
+    /* Rounded corners */
+    background-color: #f7f7f7;
+    /* Light gray background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.upload-area .upload-icon {
+    font-size: 48px;
+    /* Icon size */
+    color: #b0b0b0;
+    /* Icon color */
+    margin-bottom: 10px;
+}
+
+.upload-area p {
+    font-size: 16px;
+    color: #2b3457;
+    /* Text color */
+    margin: 0;
+}
+
+.upload-area input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* Hide the actual file input */
+    cursor: pointer;
+}
+
+.star-yellow {
+    color: #FFC107;
+    /* Yellow color */
+    font-size: 15px;
+    /* Adjust the size as needed */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Spacing between the input groups */
+}
+
+.form-control {
+    /* flex: 1; */
+    /* Allow the input to take up available space */
+    border: 1px solid #ddd;
+    border-right: none;
+    /* Remove the border on the right side */
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    /* Rounded corners on the left side */
+    font-size: 1em;
+    color: #6c757d;
+    /* Text color */
+    box-sizing: border-box;
+    margin: 0;
+    /* Remove any potential margin */
+}
+
+.form-control[type="number"] {
+    border-radius: 16px;
+    /* Increase the border-radius */
+    border: 1px solid #ddd;
+    /* Ensure the border is consistent */
+    padding: 10px;
+    font-size: 1em;
+    color: #6c757d;
+    /* Text color */
+    box-sizing: border-box;
+}
+
+.form-control[type="number"]:focus {
+    border-color: red;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove the default outline */
+}
+
+.input-group-text {
+    background-color: #f7f7f7;
+    /* Background color for the "cm" section */
+    border: 1px solid #ddd;
+    border-left: none;
+    /* Remove the border on the left side */
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+    /* Rounded corners on the right side */
+    font-size: 1em;
+    color: #2b3457;
+    /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-left: -20px;
+    /* Remove any potential margin */
+    height: 100%;
+    /* Ensures the height matches the input */
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: red;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove the default outline */
+}
+
+.input-group input:focus+.input-group-text {
+    border-color: red;
+    /* Apply the same border color to the "cm" section */
+}
+
+.modal-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay background color */
+    z-index: 1000;
+}
+
+.custom-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* Modal background color */
+    border-radius: 12px;
+    /* Modal border radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Modal box shadow */
+    width: 500px;
+    /* height: 600px; */
+    z-index: 1001;
+    padding: 20px;
+    /* Modal padding */
+    box-sizing: border-box;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    /* Space between the h2 and span */
+    align-items: center;
+    /* Vertically align items */
+    /* padding-bottom: 10px; */
+    /* Optional: Add some padding if needed */
+    border-bottom: 1px solid #ddd;
+    /* Optional: Add a bottom border for styling */
+}
+
+.modal-header h2 {
+    margin: 0;
+    /* Remove any default margin */
+    font-size: 1.5em;
+    color: #2b3457;
+    /* Text color */
+}
+
+.close-btn {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #2b3457;
+    position: relative;
+    top: -10px
+        /* Text color */
+}
+
+.modal-footer {
+    /* padding: 20px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.modal-body {
+    font-size: 1em;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: #2b3457;
+    /* Text color */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.form-group input[type="number"] {
+    width: 50px;
+}
+
+.dimensions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dimension-group {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.dimension-group input {
+    width: 60px;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.dimension-group span {
+    font-size: 0.9em;
+    color: #2b3457;
+    /* Text color */
+}
+
+.dimension-image img {
+    width: 100px;
+    height: auto;
+}
+
+.modal-submit-btn {
+    background-color: #fe5a50;
+    /* Button background color */
+    color: #fff;
+    /* padding: 10px 20px; */
+    border: none;
+    border-radius: 12px;
+    border-width: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.modal-submit-btn:hover {
+    background-color: #e04b47;
+    /* Darken button on hover */
+}
+
+.open-modal-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fe5a50;
+    /* Button background color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.inputWidth {
+    width: 270px !important;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+    .custom-modal {
+
+        /* Modal box shadow */
+        width: 95%;
+        /* margin-left: 15px; */
+        /* margin-right: 15px; */
+
+    }
+
+    .modal-body {
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    .dimensionLogo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .form-control[type="number"] {
+        width: 50px !important;
+    }
+
+    .inputWidth {
+        width: 200px !important;
+    }
+}
+
 /* Font-face */
 @font-face {
     font-family: 'Urbane Rounded';
-    src: url('./fonts/UrbaneRounded-Heavy.ttf') format('truetype'); /* Adjust the path as necessary */
+    src: url('./fonts/UrbaneRounded-Heavy.ttf') format('truetype');
+    /* Adjust the path as necessary */
     font-weight: normal;
     font-style: normal;
+}
+
+.counter {
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
 /* General Styles */
@@ -35,16 +392,21 @@ a {
     text-decoration: none;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin: 0;
     font-family: 'Urbane Rounded';
 }
 
 .highlighted-text {
-    color: #fe5a50; /* Updated color */
+    color: #fe5a50;
+    /* Updated color */
 }
+
 #totalCount {
-    color: #2b3457; /* Default color */
+    color: #2b3457;
+    margin-right: 10px;
+    /* Default color */
 }
 
 /* Navbar */
@@ -63,6 +425,8 @@ h1, h2 {
     font-size: 24px;
     color: var(--color-secondary);
     font-weight: bold;
+    margin-left: 96px;
+
 }
 
 .logo span {
@@ -87,7 +451,8 @@ h1, h2 {
     list-style: none;
     display: flex;
     align-items: center;
-    
+    margin-right: 96px;
+
 }
 
 .nav-links li {
@@ -146,6 +511,25 @@ h1, h2 {
     display: block;
 }
 
+.continueBtn {
+    background-color: var(--color-primary);
+    border: 2px solid white;
+    color: white;
+    padding: 12px 22px;
+    /* padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: .5rem;
+        padding-right: .5rem; */
+    /* border-radius: 20px; */
+    cursor: pointer;
+    /* font-weight: 700; */
+    font-size: 1.2rem;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    margin-bottom: 100px;
+}
+
 .get-quote-btn {
     background-color: white;
     border: 2px solid var(--color-primary);
@@ -157,14 +541,14 @@ h1, h2 {
     padding-right: .5rem; */
     /* border-radius: 20px; */
     cursor: pointer;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 1rem;
     border-radius: 12px;
     transition: all 0.2s ease-in-out;
     display: flex;
-  
 
-        }
+
+}
 
 .get-quote-btn:hover {
     background-color: var(--color-primary);
@@ -172,8 +556,8 @@ h1, h2 {
 
 }
 
-.get-quote-btn-div:hover{
-    background-color :#fff !important;
+.get-quote-btn-div:hover {
+    background-color: #fff !important;
 }
 
 /* Sidebar */
@@ -191,12 +575,12 @@ h1, h2 {
     z-index: 1000;
 }
 
-.addItemsBtnContainer{
+.addItemsBtnContainer {
     width: 100%;
-/* background-color: red; */
-display: flex;
-align-items: flex-end;
-justify-content: flex-end;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 
@@ -206,21 +590,24 @@ justify-content: flex-end;
 }
 
 
-.dropdown-toggle a{
+.dropdown-toggle a {
     vertical-align: middle;
 }
 
 .dropdown-toggle i {
-    vertical-align: middle; /* or top/bottom */
-    margin-left: 5px; 
+    vertical-align: middle;
+    /* or top/bottom */
+    margin-left: 5px;
 }
+
 .dropdown-toggle {
-    line-height: 1.5; /* Adjust as needed */
+    line-height: 1.5;
+    /* Adjust as needed */
     display: flex;
     align-items: center;
 }
 
-.fa-arrow-right{
+.fa-arrow-right {
     margin-left: 5px;
 }
 
@@ -275,7 +662,7 @@ justify-content: flex-end;
 .sidebar .dropdown.active .dropdown-content {
     display: block;
 }
- 
+
 
 
 /* Background Overlay */
@@ -302,35 +689,35 @@ justify-content: flex-end;
     padding: 40px;
     background-color: var(--color-background);
     /* background-color: red; */
-    max-width: 600px;
+    max-width: 800px;
     padding-top: 60px;
- 
+
     margin: 0 auto;
 }
 
 .quote-section h1 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: var(  --color-secondary);
+    color: var(--color-secondary);
     font-size: 3.29rem;
     text-align: center;
 }
 
 .quote-section p {
-   
+
     margin-bottom: 30px;
     font-size: 1.375rem !important;
-    color: var(  --color-secondary);
+    color: var(--color-secondary);
     text-align: center;
 }
 
 
 
 .item-dropdown-button:focus .container3icon,
-  .item-dropdown-button:focus div {
+.item-dropdown-button:focus div {
     color: var(--color-primary);
     font-weight: 600;
-  }
+}
 
 
 
@@ -366,11 +753,11 @@ justify-content: flex-end;
     font-weight: 550;
 }
 
-.text-primary{
+.text-primary {
     color: var(--color-primary);
 }
 
-.inputContainer{
+.inputContainer {
     /* background-color: red; */
     display: flex;
     width: 100%;
@@ -388,10 +775,11 @@ justify-content: flex-end;
 
 .inputContainer:focus-within {
     border: 2px solid var(--color-primary);
-    box-shadow: 2px .22px 5px #fdbbbf;;
+    box-shadow: 2px .22px 5px #fdbbbf;
+    ;
 }
 
-.inputContainer i{
+.inputContainer i {
     color: var(--color-primary);
 }
 
@@ -405,17 +793,35 @@ justify-content: flex-end;
     outline: none;
 }
 
+.pickupInput2 {
+    border: 2px solid #ddd;
+    /* Default border color */
+    padding: 8px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.pickupInput2:focus {
+    border-color: red;
+    /* Border color on focus */
+    outline: none;
+    /* Remove the default outline */
+}
+
 input:focus {
     /* border: 2px solid var(--color-primary);
     box-shadow: 2px .22px 5px #fdbbbf;; */
-    outline: none; /* Remove default outline */
+    outline: none;
+    /* Remove default outline */
 }
 
 /* Optional: If you want to apply the same style to select elements */
 select:focus {
     /* border: 2px solid var(--color-primary);
     box-shadow: 2px .22px 5px #fdbbbf;; */
-    outline: none; /* Remove default outline */
+    outline: none;
+    /* Remove default outline */
 }
 
 .form-container-select {
@@ -461,7 +867,7 @@ select:focus {
     width: 0;
 }
 
-.checkbox-container-textArea{
+.checkbox-container-textArea {
     display: block;
     width: 90%;
     padding: 0.5rem 1rem;
@@ -475,16 +881,21 @@ select:focus {
     appearance: none;
     border-radius: 12px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-.checkbox-container-textArea:focus{
+
+.checkbox-container-textArea:focus {
     border: 2px solid var(--color-primary);
-    box-shadow: 2px .22px 5px #fdbbbf;;
-    outline: none; /* Remove default outline */
+    box-shadow: 2px .22px 5px #fdbbbf;
+    ;
+    outline: none;
+    /* Remove default outline */
 }
+
 .checkbox-container-textArea::placeholder {
-    color:var(--color-border); /* Example color; adjust as needed */
+    color: var(--color-border);
+    /* Example color; adjust as needed */
 }
 
 .checkmark {
@@ -498,12 +909,12 @@ select:focus {
     border-radius: 4px;
 }
 
-.checkbox-container input:checked ~ .checkmark {
+.checkbox-container input:checked~.checkmark {
     background-color: var(--color-primary);
     border: none;
 }
 
-.checkbox-container input:checked ~ .checkmark::after {
+.checkbox-container input:checked~.checkmark::after {
     display: block;
 }
 
@@ -531,44 +942,46 @@ select:focus {
 
 /* Style for nav-links on hover */
 .nav-links li:hover {
-    background-color: var( --color-border-light);
+    background-color: var(--color-border-light);
 }
 
 /* Style for active dropdown items */
 .nav-links .dropdown.active {
-    background-color: var( --color-border-light);
+    background-color: var(--color-border-light);
 }
 
 .nav-links .dropdown.active .dropdown-content {
-    display: block; /* Ensure the dropdown content is visible when the parent is active */
+    display: block;
+    /* Ensure the dropdown content is visible when the parent is active */
 }
 
 /* Ensure dropdown content items inherit the background of the parent */
 .nav-links .dropdown.active .dropdown-content li {
-    background-color: var( --color-border-light);
+    background-color: var(--color-border-light);
     transition: 0.4s ease;
 }
 
-.dropdownList{
+.dropdownList {
     background-color: #fff !important;
     /* text-decoration: none !important; */
     /* text-decoration: double; */
     list-style-type: none;
 
 }
-.dropdownList:hover{
+
+.dropdownList:hover {
     /* background-color: red !important; */
-    background-color: var( --color-border-light) !important;
+    background-color: var(--color-border-light) !important;
 
 }
 
 
-.item-container3-grey{
+.item-container3-grey {
     color: var(--color-border);
     display: none;
 }
 
-.item-container3-text{
+.item-container3-text {
     text-align: right;
     /* margin-right: 150px; */
     /* background-color: red; */
@@ -577,7 +990,7 @@ select:focus {
 
 
 
-.item-container3-label{
+.item-container3-label {
     width: 100%;
     height: 100%;
     padding-bottom: 3px;
@@ -585,10 +998,11 @@ select:focus {
     /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: flex-end ;
+    justify-content: flex-end;
     /* gap: 50px; */
 }
-.container3-icon-add{
+
+.container3-icon-add {
     border-radius: 12px;
     padding-left: 0.7rem !important;
     padding-right: 0.7rem !important;
@@ -601,7 +1015,7 @@ select:focus {
     gap: 8px;
 }
 
-.countBtnContainer{
+.countBtnContainer {
     display: flex;
     width: 150px;
     flex-direction: row;
@@ -628,7 +1042,7 @@ select:focus {
     text-align: center;
 }
 
-.container3-icon-add:hover{
+.container3-icon-add:hover {
     background-color: var(--color-secondary);
     color: #fff;
 }
@@ -639,37 +1053,44 @@ select:focus {
     margin: 0px 0;
     width: 100%;
 }
+
 .item-dropdown-content {
-    display: none;
-    position: relative; /* Change from absolute to relative */
+    max-height: 0;
+    /* Start with collapsed height */
+    opacity: 0;
+    /* Initially invisible */
+    overflow: hidden;
+    /* Hide content that overflows */
+    position: relative;
+    /* Ensure the dropdown stays within the flow of the document */
     background-color: #fff;
     width: 100%;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
     border-radius: 5px;
     box-sizing: border-box;
-    /* max-height: 0; */
-    overflow: hidden;
-    transition: max-height 0.5s ease-out; /* Sliding effect */
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+    /* Smooth transition for height and opacity */
 }
 
 .item-dropdown-content.show {
-    display: block;
-    min-height: 100px; /* Adjust based on content height */
+    max-height: 500px;
+    /* Adjust this value based on content height */
+    opacity: 1;
+    /* Fully visible when expanded */
 }
 
-.container3icon{
+.container3icon {
     width: 20px !important;
     height: 20px !important;
     margin-right: 10px;
 }
-.dropdown-icon{
+
+.dropdown-icon {
     color: var(--color-primary);
 }
 
 
-.dropHead
-{
+.dropHead {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -696,26 +1117,28 @@ select:focus {
     justify-content: space-between;
     width: 100%;
     /* box-sizing: border-box; */
-    position: relative; /* Ensure dropdowns appear correctly */
+    position: relative;
+    /* Ensure dropdowns appear correctly */
     border-top: 2px solid var(--color-border);
     /* border-bottom: 2px solid var(--color-border); */
 }
 
 .item-dropdown-button:hover {
-    background-color:#faf7f7;
+    background-color: #faf7f7;
     /* background-color:var(--color-border-light); */
-    
+
 }
+
 .icon-image {
     margin-right: 8px;
 }
 
-.form-container3-label{
+.form-container3-label {
     padding-bottom: 1rem;
     /* background-color: red; */
 }
 
-.sidebar{
+.sidebar {
     display: none;
 }
 
@@ -724,36 +1147,43 @@ select:focus {
 .option-container {
     display: flex;
     gap: 10px;
-    margin-top: 10px; /* Added for spacing */
+    margin-top: 10px;
+    /* Added for spacing */
     flex-wrap: wrap;
 }
 
 .option-item {
-    padding: 10px 15px; 
-    border: 2px solid var(--color-checkmark-border); /* Default border color */
+    padding: 10px 15px;
+    border: 2px solid var(--color-checkmark-border);
+    /* Default border color */
     border-radius: 1.7rem;
     cursor: pointer;
-    transition: border-color 0.3s ease; /* Smooth transition */
+    transition: border-color 0.3s ease;
+    /* Smooth transition */
 }
 
 .option-item.active {
-    border-color: var(--color-primary); /* Border color when active */
-    font-weight: bold; /* Optional: make text bold */
-    background-color: #f8f8f8; /* Optional: light background color for contrast */
+    border-color: var(--color-primary);
+    /* Border color when active */
+    font-weight: bold;
+    /* Optional: make text bold */
+    background-color: #f8f8f8;
+    /* Optional: light background color for contrast */
 }
 
-.date-container{
+.date-container {
     width: 100%;
     margin-top: 2rem;
 
-  
+
 }
 
-.calContainer{
+.calContainer {
     display: flex;
     width: 100%;
 }
-.date-range-container{
+
+.date-range-container {
     width: 100%;
     margin-top: 2rem;
     /* display: flex !important; */
@@ -762,12 +1192,13 @@ select:focus {
     /* background-color: red; */
 
 }
-.cal1{
+
+.cal1 {
     /* background-color: blue; */
     width: 100%;
 }
 
-.calInput{
+.calInput {
     width: 50%;
     padding: 8px 32px;
     border: 2px solid var(--color-border);
@@ -776,7 +1207,8 @@ select:focus {
     color: var(--color-secondary);
     /* background-color: red; */
 }
-.date-input{
+
+.date-input {
     width: 85%;
     padding: 8px 32px;
     border: 2px solid var(--color-border);
@@ -785,17 +1217,17 @@ select:focus {
     color: var(--color-secondary);
 }
 
-.date-input:focus{
+.date-input:focus {
     border: 2px solid var(--color-primary);
 }
 
 
-.service-checkbox:checked{
+.service-checkbox:checked {
     /* background-color: red; */
 }
 
 
-.navItemContainer{
+.navItemContainer {
     display: flex;
     gap: 10px;
     /* align-items: center; */
@@ -817,50 +1249,69 @@ select:focus {
 }
 
 .checkbox-group label {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Center items vertically */
-    padding: 10px; /* Add padding around each label */
+    display: flex;
+    /* Align items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    padding: 10px;
+    /* Add padding around each label */
     /* border: 1px solid #ddd;  */
-    border-radius: 4px; /* Rounded corners */
-    margin-bottom: 5px; /* Space between checkboxes */
-    position: relative; /* Position relative for better control */
-    cursor: pointer; /* Pointer cursor for better UX */
+    border-radius: 4px;
+    /* Rounded corners */
+    margin-bottom: 5px;
+    /* Space between checkboxes */
+    position: relative;
+    /* Position relative for better control */
+    cursor: pointer;
+    /* Pointer cursor for better UX */
 }
 
 .checkbox-group .custom-checkbox {
     display: inline-block;
-    width: 20px; /* Width of the custom checkbox */
-    height: 20px; /* Height of the custom checkbox */
-    margin-right: 10px; /* Space between checkbox and text */
-    border: 1px solid #ddd; 
-    border-radius: 3px; /* Rounded corners for the custom checkbox */
-    position: relative; /* Position relative for the checkmark */
+    width: 20px;
+    /* Width of the custom checkbox */
+    height: 20px;
+    /* Height of the custom checkbox */
+    margin-right: 10px;
+    /* Space between checkbox and text */
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    /* Rounded corners for the custom checkbox */
+    position: relative;
+    /* Position relative for the checkmark */
 }
 
 .checkbox-group input[type="checkbox"] {
-    display: none; /* Hide the default checkbox */
+    display: none;
+    /* Hide the default checkbox */
 }
 
-.checkbox-group input[type="checkbox"]:checked + .custom-checkbox {
-    background-color: var(--color-primary); /* Red background for the checked state */
-    border: 2px solid transparent; 
+.checkbox-group input[type="checkbox"]:checked+.custom-checkbox {
+    background-color: var(--color-primary);
+    /* Red background for the checked state */
+    border: 2px solid transparent;
 }
 
-.checkbox-group input[type="checkbox"]:checked + .custom-checkbox::after {
-    content: ''; /* Empty content for the checkmark */
+.checkbox-group input[type="checkbox"]:checked+.custom-checkbox::after {
+    content: '';
+    /* Empty content for the checkmark */
     position: absolute;
     top: 25%;
     left: 20%;
     width: 12px;
     height: 6px;
     border: solid white;
-    border-width: 2px 2px 0 0; /* Create the checkmark shape */
-    transform: rotate(135deg) !important; /* Rotate to create a checkmark */
-    transform: translate(20%, -50%); /* Center the checkmark */
+    border-width: 2px 2px 0 0;
+    /* Create the checkmark shape */
+    transform: rotate(135deg) !important;
+    /* Rotate to create a checkmark */
+    transform: translate(20%, -50%);
+    /* Center the checkmark */
 }
 
 .checkbox-group .checkbox-text {
-    flex: 1; /* Take up remaining space */
+    flex: 1;
+    /* Take up remaining space */
 }
 
 
@@ -908,50 +1359,74 @@ select:focus {
 }
 
 
-.radio-label strong{
-
-}
+.radio-label strong {}
 
 .radio-custom {
-    width: 20px ;
-    height: 20px ;
+    width: 15px;
+    height: 15px;
     border: 2px solid #ccc;
     border-radius: 50%;
     margin-right: 20px;
     position: relative;
     background-color: #fff;
+    transition: all 0.3s ease;
+    /* Add transition for smooth resizing */
 }
 
 .radio-custom::after {
     content: '';
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background-color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    /* Add transition for smooth resizing */
 }
 
-.radio-option input[type="radio"]:checked + .radio-label .radio-custom {
-    background-color: var(--color-primary);
+.radio-option input[type="radio"]:checked+.radio-label .radio-custom {
+    background-color: #fe5a50;
+    /* Replace with your primary color */
     border-color: transparent;
 }
 
-.radio-option input[type="radio"]:checked + .radio-label .radio-custom::after {
+.radio-option input[type="radio"]:checked+.radio-label .radio-custom::after {
     background-color: white;
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust the size of the radio buttons on smaller screens */
+    .radio-custom {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+    }
+
+    .radio-custom::after {
+        width: 5px;
+        height: 5px;
+    }
+
+    /* Adjust the text size or spacing if needed */
+    .radio-label {
+        font-size: 14px;
+        /* Smaller font size on mobile */
+    }
 }
 
 .sub-title {
     /* margin-left: 10px; */
     font-size: 16px;
     color: var(--color-secondary);
-   
+
 }
 
-.radio-container6{
+.radio-container6 {
     width: 80%;
 }
 
@@ -979,16 +1454,22 @@ select:focus {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .logo a {
+
+        margin-left: 16px;
+
+    }
 
     .form-container {
         padding: 20px;
     }
+
     .nav-links {
         display: none;
     }
 
 
-    .inputContainer{
+    .inputContainer {
         width: 95%;
     }
 
@@ -996,7 +1477,7 @@ select:focus {
         display: flex;
     }
 
-    .navbar{
+    .navbar {
         padding: 0.75rem 20px;
     }
 
@@ -1036,41 +1517,41 @@ select:focus {
     .quote-section h1 {
         font-size: calc(1.485rem + 1.82vw);
         margin-bottom: 20px;
-        color: var(  --color-secondary);
-       
+        color: var(--color-secondary);
+
         text-align: center;
     }
-    
+
     .quote-section p {
-       
+
         margin-bottom: 30px;
         font-size: 1.125rem !important;
-        color: var(  --color-secondary);
+        color: var(--color-secondary);
         text-align: center;
     }
 
 
     .form-container-select {
         width: 100%;
-       
+
     }
-    
+
     .pickupInput {
         width: 78%;
 
     }
 
-    .checkbox-container-textArea{
-            width: 87%;
+    .checkbox-container-textArea {
+        width: 87%;
     }
 
 
     .option-item {
         /* padding: 8px 5px; */
     }
-    
 
 
- 
+
+
 
 }
